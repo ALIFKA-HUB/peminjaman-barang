@@ -77,6 +77,14 @@
                 <i class="bi bi-clock-history"></i>
                 <span>Daftar Sanksi</span>
             </a>
+        <li class="sidebar-item">
+            <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                @csrf
+                <button type="submit" class="sidebar-link border-0 bg-transparent w-100 text-start">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </button>
+            </form>
         </li>
     </ul>
 </div>

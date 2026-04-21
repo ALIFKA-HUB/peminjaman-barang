@@ -18,5 +18,12 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ItemSeeder::class,
         ]);
+
+        // Create default admin user
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@example.com',
+            'password' => bcrypt('password'),
+        ]);
     }
 }
